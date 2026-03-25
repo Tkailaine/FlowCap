@@ -14,12 +14,19 @@ export function FormularioSimulador(){
         const backlog = calculoBacklog({pedidos: pedidos, capacidade: capacidade, dias: tempo})
         const atraso = calculoAtraso({backlog: backlog, capacidade:capacidade})
         const risco = calculoRisco({backlog: backlog, capacidade: capacidade})
-        const acumulo = pedidos - capacidade;
+        const acumulo = Math.max(pedidos - capacidade, 0);
 
-        const mensagem = `
+        if(capacidade === 0 ){
+             const mensagem = `Capacidade Inválida, Digite um valor maior que 0.` 
+             setResultado(mensagem)
+        }else{
+            const mensagem = `
         Com ${pedidos} pedidos/dia e capacidade de ${capacidade}, haverá acúmulo de ${acumulo} pedidos por dia. Em ${tempo} dias, o backlog será de ${backlog} pedidos. Isso representa um atraso médio de aproximadamente ${atraso} dias. Risco: ${risco}.
         ` 
         setResultado(mensagem)
+        }
+        
+
     }
 
     return(
