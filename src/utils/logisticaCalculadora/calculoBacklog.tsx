@@ -3,6 +3,8 @@
     capacidade: number,
     dias: number
  }
+
+ //Calcula o backlog 
  export const calculoBacklog = ({pedidos, capacidade, dias}:prospsBacklog) => {
         let backlog = 0
         
