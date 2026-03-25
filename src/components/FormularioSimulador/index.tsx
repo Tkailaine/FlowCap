@@ -19,6 +19,9 @@ export function FormularioSimulador(){
         if(capacidade === 0 ){
              const mensagem = `Capacidade Inválida, Digite um valor maior que 0.` 
              setResultado(mensagem)
+        }else if(pedidos < 0){
+            const mensagem = `Pedidos Inválido, Digite um valor maior que 0.` 
+             setResultado(mensagem)
         }else{
             const mensagem = `
         Com ${pedidos} pedidos/dia e capacidade de ${capacidade}, haverá acúmulo de ${acumulo} pedidos por dia. Em ${tempo} dias, o backlog será de ${backlog} pedidos. Isso representa um atraso médio de aproximadamente ${atraso} dias. Risco: ${risco}.
