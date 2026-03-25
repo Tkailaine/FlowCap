@@ -24,7 +24,7 @@ export function FormularioSimulador(){
              setResultado(mensagem)
         }else{
             const mensagem = `
-        Com ${pedidos} pedidos/dia e capacidade de ${capacidade}, haverá acúmulo de ${acumulo} pedidos por dia. Em ${tempo} dias, o backlog será de ${backlog} pedidos. Isso representa um atraso médio de aproximadamente ${atraso} dias. Risco: ${risco}.
+        Com ${pedidos} pedidos/dia e capacidade de ${capacidade}, haverá acúmulo de ${acumulo} pedidos por dia. Em ${tempo} dias, o backlog será de ${backlog} pedidos. Isso representa um atraso médio de aproximadamente ${atraso.toFixed(1)} dias. Risco: ${risco}.
         ` 
         setResultado(mensagem)
         }
