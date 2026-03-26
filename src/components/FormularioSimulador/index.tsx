@@ -1,6 +1,7 @@
 import calculoAtraso from "../../utils/logisticaCalculadora/calculoAtraso";
 import calculoBacklog from "../../utils/logisticaCalculadora/calculoBacklog";
 import calculoRisco from "../../utils/logisticaCalculadora/calculoRisco";
+import { recomendacaoEstrategia } from "../../utils/logisticaCalculadora/recomendacao";
 import "./style.css";
 import { useState } from "react";
 export function FormularioSimulador() {
@@ -8,6 +9,7 @@ export function FormularioSimulador() {
   const [capacidade, setCapacidade] = useState(0);
   const [tempo, setTempo] = useState(0);
   const [resultado, setResultado] = useState("");
+  const [recomendacao, setRecomendacao] = useState("")
 
   const processarCalculo = (e) => {
     e.preventDefault();
@@ -33,6 +35,8 @@ export function FormularioSimulador() {
       }, o backlog será de ${backlog} pedidos. Isso representa um atraso médio de aproximadamente ${atraso}. Risco: ${risco}.
         `;
       setResultado(mensagem);
+
+      setRecomendacao(recomendacaoEstrategia({risco:risco}))
     }
   };
 
@@ -60,6 +64,7 @@ export function FormularioSimulador() {
       </form>
 
       <p>{resultado}</p>
+      <p>RECOMENDAÇÃO {recomendacao}</p>
     </>
   );
 }
