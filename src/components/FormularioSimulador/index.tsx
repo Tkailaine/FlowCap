@@ -24,7 +24,6 @@ export function FormularioSimulador() {
     const risco = calculoRisco({backlog, capacidade });
     const acumulo = Math.max(pedidos - capacidade, 0);
 
-    const mensagem = validarEntradas({pedidos, capacidade})
     const erro = validarEntradas({pedidos, capacidade})
     
     if (erro) {

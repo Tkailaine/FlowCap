@@ -1,7 +1,26 @@
 .container-formulario{
     display: flex;
     flex-direction:column;
-    max-width: 500px;
+    max-width: 350px;
     gap: 10px;
-    background:white;
+    background:#ECECEC;
+    padding: 20px;
+    min-height: 400px;
+    justify-content: center;
+    align-items:center;
+    border-radius:20px
+}
+
+.container-formulario input, .container-formulario button{
+   padding: 15px 40px;
+   border-radius: 30px;
+   border:none;
+
+}
+
+.container-formulario button{
+    background-color: #1774ff;
+    color: white;
+    cursor: pointer;
+    width:250px
 }
