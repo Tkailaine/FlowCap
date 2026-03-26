@@ -2,8 +2,11 @@ import calculoAtraso from "../../utils/logistica/calculos/calculoAtraso";
 import calculoBacklog from "../../utils/logistica/calculos/calculoBacklog";
 import calculoRisco from "../../utils/logistica/calculos/calculoRisco";
 import { recomendacaoEstrategia } from "../../utils/logistica/recomendacoes/gerarRecomendacao";
+import validarEntradas from "../../utils/logistica/validadores/validarEntradas";
 import "./style.css";
 import { useState } from "react";
+
+
 export function FormularioSimulador() {
   const [pedidos, setPedidos] = useState(0);
   const [capacidade, setCapacidade] = useState(0);
@@ -11,23 +14,21 @@ export function FormularioSimulador() {
   const [resultado, setResultado] = useState("");
   const [recomendacao, setRecomendacao] = useState("")
 
-  const processarCalculo = (e) => {
-    e.preventDefault();
+  const processarCalculo = () => {
     const backlog = calculoBacklog({
-      pedidos: pedidos,
-      capacidade: capacidade,
+      pedidos,
+      capacidade,
       dias: tempo,
     });
-    const atraso = calculoAtraso({ backlog: backlog, capacidade: capacidade });
-    const risco = calculoRisco({ backlog: backlog, capacidade: capacidade });
+    const atraso = calculoAtraso({ backlog, capacidade });
+    const risco = calculoRisco({backlog, capacidade });
     const acumulo = Math.max(pedidos - capacidade, 0);
 
-    if (capacidade === 0) {
-      const mensagem = `Capacidade Inválida, Digite um valor maior que 0.`;
-      setResultado(mensagem);
-    } else if (pedidos < 0) {
-      const mensagem = `Pedidos Inválido, Digite um valor maior que 0.`;
-      setResultado(mensagem);
+    const mensagem = validarEntradas({pedidos, capacidade})
+    const erro = validarEntradas({pedidos, capacidade})
+    
+    if (erro) {
+      setResultado(erro)
     } else {
       const mensagem = `
         Com ${pedidos} pedidos/dia e capacidade de ${capacidade}, haverá acúmulo de ${acumulo} pedidos por dia. Em ${tempo} ${
@@ -36,7 +37,7 @@ export function FormularioSimulador() {
         `;
       setResultado(mensagem);
 
-      setRecomendacao(recomendacaoEstrategia({risco:risco}))
+      setRecomendacao(recomendacaoEstrategia({risco}))
     }
   };
 
