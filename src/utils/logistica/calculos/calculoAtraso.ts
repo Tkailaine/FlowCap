@@ -1,4 +1,4 @@
-import formatarAtraso from "./formatarAtraso";
+import formatarAtraso from "../formatadores/formatarAtraso";
 interface propsCalculoAtraso {
   backlog: number;
   capacidade: number;

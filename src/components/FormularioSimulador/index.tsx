@@ -1,7 +1,7 @@
-import calculoAtraso from "../../utils/logisticaCalculadora/calculoAtraso";
-import calculoBacklog from "../../utils/logisticaCalculadora/calculoBacklog";
-import calculoRisco from "../../utils/logisticaCalculadora/calculoRisco";
-import { recomendacaoEstrategia } from "../../utils/logisticaCalculadora/recomendacao";
+import calculoAtraso from "../../utils/logistica/calculos/calculoAtraso";
+import calculoBacklog from "../../utils/logistica/calculos/calculoBacklog";
+import calculoRisco from "../../utils/logistica/calculos/calculoRisco";
+import { recomendacaoEstrategia } from "../../utils/logistica/recomendacoes/gerarRecomendacao";
 import "./style.css";
 import { useState } from "react";
 export function FormularioSimulador() {
