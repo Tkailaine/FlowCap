@@ -1,7 +1,7 @@
 import calculoAtraso from "../../utils/logistica/calculos/calculoAtraso";
 import calculoBacklog from "../../utils/logistica/calculos/calculoBacklog";
 import calculoRisco from "../../utils/logistica/calculos/calculoRisco";
-import { recomendacaoEstrategia } from "../../utils/logistica/recomendacoes/gerarRecomendacao";
+{/*import { recomendacaoEstrategia } from "../../utils/logistica/recomendacoes/gerarRecomendacao";*/}
 import validarEntradas from "../../utils/logistica/validadores/validarEntradas";
 import "./style.css";
 import { useState } from "react";
@@ -12,7 +12,7 @@ export function FormularioSimulador() {
   const [capacidade, setCapacidade] = useState(0);
   const [tempo, setTempo] = useState(0);
   const [resultado, setResultado] = useState("");
-  const [recomendacao, setRecomendacao] = useState("")
+  {/*const [recomendacao, setRecomendacao] = useState("")*/}
 
   const processarCalculo = () => {
     const backlog = calculoBacklog({
@@ -36,13 +36,13 @@ export function FormularioSimulador() {
         `;
       setResultado(mensagem);
 
-      setRecomendacao(recomendacaoEstrategia({risco}))
+      {/*setRecomendacao(recomendacaoEstrategia({risco}))*/}
     }
   };
 
   return (
     <>
-      <form className="container-formulario">
+      <form className="formulario">
         <input
           type="number"
           placeholder="Pedidos por dia"
@@ -64,7 +64,7 @@ export function FormularioSimulador() {
       </form>
 
       <p>{resultado}</p>
-      <p>RECOMENDAÇÃO {recomendacao}</p>
+      {/*<p>RECOMENDAÇÃO {recomendacao}</p>*/}
     </>
   );
 }

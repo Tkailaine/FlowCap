@@ -1,9 +1,9 @@
-.container-formulario{
+.formulario{
     display: flex;
     flex-direction:column;
     max-width: 350px;
     gap: 10px;
-    background:#ECECEC;
+    background:white;
     padding: 20px;
     min-height: 400px;
     justify-content: center;
@@ -11,14 +11,14 @@
     border-radius:20px
 }
 
-.container-formulario input, .container-formulario button{
+.formulario input, .formulario button{
    padding: 15px 40px;
    border-radius: 30px;
    border:none;
 
 }
 
-.container-formulario button{
+.formulario button{
     background-color: #1774ff;
     color: white;
     cursor: pointer;

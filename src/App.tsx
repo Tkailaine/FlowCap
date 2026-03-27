@@ -7,7 +7,9 @@ function App() {
  
  return(
     <main>
-  <FormularioSimulador/>
+      <div className="container-formulario">
+        <FormularioSimulador/>
+      </div>
   </main>
  )
 }
