@@ -1,15 +1,14 @@
 body{
-  backround
-}
-main{
-  display: flex;
-  flex-direction: column;
+  background-image: linear-gradient(45deg, #0F172A, #1c2e5a)
 }
 
-.container-formulario{
+
+.container-dashboard{ 
+  display: flex;
   height: 100vh;
   width:100%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items:center; 
+  gap: 50px;
 }
