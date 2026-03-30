@@ -1,0 +1,22 @@
+.card-recomendacao {
+  padding: 18px;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 350px;
+  max-width: 350px;
+}
+
+.card-recomendacao.alto {
+  border-left: 4px solid red;
+}
+
+.card-recomendacao.medio {
+  border-left: 4px solid orange;
+}
+
+.card-recomendacao.baixo {
+  border-left: 4px solid green;
+}

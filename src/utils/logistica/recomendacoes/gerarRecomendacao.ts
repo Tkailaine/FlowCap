@@ -1,12 +1,19 @@
 type propsRecomendacaoEstrategia = {
     risco: string
 }
-export const recomendacaoEstrategia = ({risco}:propsRecomendacaoEstrategia) => {
-   if(risco === 'Baixo'){
-    return 'Nenhuma ação necessária'
-   }else if(risco === 'Médio'){
-    return 'Monitorar a operação e considerar ajustes na capacidade para evitar aumento do atraso.'
-   }else{
-    return 'Aumentar capacidade operacional imediatamente ou redistribuir pedidos para evitar crescimento do backlog.'
-   }
-}
+
+type Recomendacao = {
+  texto: string;
+};
+
+export const recomendacaoEstrategia = ({ risco }: propsRecomendacaoEstrategia): Recomendacao => {
+  if (risco === 'Baixo') {
+    return { texto: 'Nenhuma ação necessária' };
+  } else if (risco === 'Médio') {
+    return { texto: 'Monitorar a operação e considerar ajustes na capacidade.' };
+  } else {
+    return { texto: 'Aumentar capacidade ou redistribuir pedidos.' };
+  }
+};
+
+export default recomendacaoEstrategia

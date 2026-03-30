@@ -1,11 +1,24 @@
-.container-resultado{
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-    padding: 20px 50px;
-    min-height: 400px;
-    border-radius:20px;
-    justify-content: center;
-    gap: 20px;
+.container-geral {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
 
+.container-secao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.secao-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-left: 4px;
 }
