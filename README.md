@@ -137,16 +137,16 @@ src/
 
 ## ⚙️ Como executar
 
-# Clone o repositório
+Clone o repositório: 
 git clone https://github.com/Tkailaine/FlowCap
 
-# Acesse a pasta
+Acesse a pasta: 
 cd FlowCap
 
-# Instale as dependências
+Instale as dependências: 
 npm install
 
-# Rode o projeto
+Rode o projeto: 
 npm run dev
 
 ---
