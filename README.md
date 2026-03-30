@@ -174,7 +174,7 @@ Link Vercel: https://flow-cap.vercel.app/
 
 ---
 
-##📬 Contato
+## 📬 Contato
 
 Caso queira trocar ideias ou dar feedback:
 
