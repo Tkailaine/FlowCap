@@ -9,25 +9,19 @@ type PropsDashboard = {
 };
 
 export function DashboardResultado({ dados }: PropsDashboard) {
-  if (!dados) {
-    return <p>Preencha os dados para visualizar a simulação</p>;
-  }
-
-  if (dados.erro) {
-    return <p>{dados.erro}</p>;
-  }
+  if (!dados) return null; 
 
   const resumoOperacao = [
     { tipo: "Risco", valor: dados.risco },
-    { tipo: "Atraso", valor: formatarAtraso({ atraso: dados.atraso }) },
+    { tipo: "Atraso estimado", valor: formatarAtraso({ atraso: dados.atraso }) },
     { tipo: "Backlog", valor: dados.backlog },
-    { tipo: "Acúmulo", valor: dados.acumulo },
+    { tipo: "Acúmulo diário", valor: dados.acumulo },
   ];
 
   const metricas = [
-    { tipo: "Demandas", valor: dados.pedidos },
-    { tipo: "Capacidade", valor: dados.capacidade },
-    { tipo: "Período", valor: dados.tempo },
+    { tipo: "Demandas/dia", valor: dados.pedidos },
+    { tipo: "Capacidade/dia", valor: dados.capacidade },
+    { tipo: "Período (dias)", valor: dados.tempo },
   ];
 
   return (
@@ -49,7 +43,6 @@ export function DashboardResultado({ dados }: PropsDashboard) {
         </div>
       </section>
 
-  
       <section className="container-secao">
         <div className="secao-header">Métricas</div>
 

@@ -5,7 +5,7 @@
     width: 350px;
     gap: 10px;
     background:white;
-    padding: 40px 10px;
+    padding: 40px 30px;
     min-height: 400px;
     justify-content: center;
     align-items:center;
@@ -20,7 +20,7 @@
 }
 
 .formulario input, .formulario button{
-   padding: 15px 40px;
+   padding: 15px 50px;
    border-radius: 30px;
    border:none;
 
@@ -33,9 +33,6 @@
     width:250px
 }
 
-.formulario label{
-    text-align: left;
-}
 
 .campo {
   display: flex;
@@ -46,4 +43,34 @@
 .formulario input{
     background-color: transparent;
     border: #334155 2px solid;
+}
+
+.formulario label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo small {
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+.erro {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.exemplo {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 4px;
+  text-align: center;
 }
