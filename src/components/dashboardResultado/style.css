@@ -1,6 +1,6 @@
 .container-geral {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
@@ -21,4 +21,10 @@
   font-weight: 600;
   color: #cbd5e1;
   margin-left: 4px;
+}
+
+@media(min-width:1250px){
+  .container-geral{
+    grid-template-columns: 1fr 1fr;
+  }
 }
