@@ -52,7 +52,7 @@ O sistema considera:
 
 ---
 
-## 📸 Exemplos de uso
+## ✅ Exemplos de uso
 
 ### 🟢 Cenário estável
 Demanda: 30/dia  
@@ -90,10 +90,12 @@ Período: 10 dias
 
 ---
 ##  📷 Demonstração
-![4](https://github.com/user-attachments/assets/0a986fd5-eaba-4b5a-9aa7-f77c0f06037c)
-![3](https://github.com/user-attachments/assets/4f0d8edd-6886-4623-b7a4-2e748e4edecc)
-![2](https://github.com/user-attachments/assets/24bbc0bc-d191-4df2-8743-a57d7485096f)
+
 ![1](https://github.com/user-attachments/assets/56f34a62-f876-407a-9b53-4c66d440740c)
+![2](https://github.com/user-attachments/assets/24bbc0bc-d191-4df2-8743-a57d7485096f)
+![3](https://github.com/user-attachments/assets/4f0d8edd-6886-4623-b7a4-2e748e4edecc)
+![4](https://github.com/user-attachments/assets/0a986fd5-eaba-4b5a-9aa7-f77c0f06037c)
+
 
 ---
 
