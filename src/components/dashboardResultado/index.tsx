@@ -1,9 +1,12 @@
 import type { DadosSimulacao } from "../../App";
 import './style.css'
+import CardResultado from "../CardResultado";
+import {formatarAtraso} from "../../utils/logistica/formatadores/formatarAtraso.ts"
 
 type PropsDashboard = {
   dados: DadosSimulacao | null;
 };
+
 
 export function DashboardResultado({ dados }: PropsDashboard) {
   if (!dados) return null;
@@ -12,15 +15,29 @@ export function DashboardResultado({ dados }: PropsDashboard) {
     return <p>{dados.erro}</p>;
   }
 
+
+  const listaResultados= [
+    { tipo: "Risco", valor: dados.risco },
+    { tipo: "Atraso", valor: formatarAtraso({atraso:dados.atraso})  },
+    { tipo: "Backlog", valor: dados.backlog },
+    { tipo: "Pedidos", valor: dados.pedidos },
+    { tipo: "Capacidade", valor: dados.capacidade },
+    { tipo: "Acúmulo", valor: dados.acumulo},
+    { tipo: "Período", valor: dados.tempo },
+  ];
+
+
+
   return (
-    <div className="container-resultado card">
-      <p><strong>Risco:</strong> <span className="resultado-risco">{dados.risco}</span></p>
-      <p><strong>Atraso:</strong> <span>{dados.atraso}</span></p>
-      <p><strong>Backlog:</strong> <span>{dados.backlog}</span></p>
-      <p><strong>Pedidos:</strong> <span>{dados.pedidos}</span></p>
-      <p><strong>Capacidade:</strong> <span>{dados.capacidade}</span></p>
-      <p><strong>Acúmulo:</strong> <span>{dados.acumulo}</span></p>
-      <p><strong>Período:</strong> <span>{dados.tempo}</span> dias</p>
+    <div className="container-resultado">
+        
+   {listaResultados.map((item, index) => (
+    <CardResultado 
+        key={index}
+        tipo={item.tipo}
+        resultado={String(item.valor)}
+    />
+   )) }
     </div>
   );
 }

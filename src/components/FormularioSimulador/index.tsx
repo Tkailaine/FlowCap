@@ -24,7 +24,7 @@ export function FormularioSimulador({ setDados }: PropsFormulario) {
         capacidade: 0,
         tempo: 0,
         backlog: 0,
-        atraso: "",
+        atraso: 0,
         risco: "",
         acumulo: 0,
         erro,

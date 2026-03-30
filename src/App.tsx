@@ -9,7 +9,7 @@ export type DadosSimulacao = {
   capacidade: number
   tempo: number
   backlog: number
-  atraso: string
+  atraso: number
   risco: string
   acumulo: number
   erro?: string

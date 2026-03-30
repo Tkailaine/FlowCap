@@ -14,7 +14,7 @@ export function formatarAtraso({atraso}:propsAtraso) {
       return `${dias} ${dias === 1 ? "dia" : "dias"}`;
     }
 
-    return `${dias} ${dias === 1 ? "dia" : "dias"} e ${horas} horas`;
+    return `${dias} ${dias === 1 ? "dia" : "dias"} e ${horas} ${horas == 1 ? "hora" : "horas"}`;
   }
 
   export default formatarAtraso;

@@ -1,0 +1,32 @@
+.card-resultado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-height: 20px;
+    width: 350px;
+}
+
+.card-resultado span{
+    font-size: 1.6em; 
+}
+
+
+.resultado-risco{
+
+    padding: 5px 15px;
+    border-radius: 25px;
+    color: white;
+}
+
+.vermelho{
+        background-color: red;
+}
+
+.amarelo{
+    background-color: rgb(228, 156, 3);
+}
+
+.verde{
+    background-color: green;
+}
